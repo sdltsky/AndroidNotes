@@ -1,4 +1,4 @@
-package ru.gb.androidnotes;
+package ru.gb.androidnotes.domain;
 
 public class Note {
 

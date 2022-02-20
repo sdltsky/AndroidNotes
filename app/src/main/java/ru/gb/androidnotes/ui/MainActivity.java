@@ -1,4 +1,4 @@
-package ru.gb.androidnotes;
+package ru.gb.androidnotes.ui;
 
 import android.os.Bundle;
 
@@ -7,6 +7,9 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
+
+import ru.gb.androidnotes.R;
+import ru.gb.androidnotes.domain.Note;
 
 public class MainActivity extends AppCompatActivity {
 

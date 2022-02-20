@@ -1,4 +1,4 @@
-package ru.gb.androidnotes;
+package ru.gb.androidnotes.ui;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -8,6 +8,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
+
+import ru.gb.androidnotes.domain.Note;
 
 public class NoteAdapter extends RecyclerView.Adapter<NoteViewHolder> {
     private ArrayList<Note> data;

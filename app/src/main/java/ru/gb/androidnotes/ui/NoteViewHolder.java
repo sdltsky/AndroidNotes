@@ -1,4 +1,4 @@
-package ru.gb.androidnotes;
+package ru.gb.androidnotes.ui;
 
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
@@ -6,6 +6,9 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import ru.gb.androidnotes.R;
+import ru.gb.androidnotes.domain.Note;
 
 public class NoteViewHolder extends RecyclerView.ViewHolder {
     private final TextView headlineTextView = itemView.findViewById(R.id.headline_text_view);
