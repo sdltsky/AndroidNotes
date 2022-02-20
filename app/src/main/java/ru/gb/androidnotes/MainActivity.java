@@ -3,12 +3,15 @@ package ru.gb.androidnotes;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-
+    private RecyclerView recyclerView;
+    private NoteAdapter adapter;
     private final ArrayList<Note> notesList = new ArrayList<>();
 
     private static ArrayList<Note> createExampleNotes() {
@@ -47,6 +50,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         notesList.addAll(createExampleNotes());
+
+        recyclerView = findViewById(R.id.recycler_view);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        adapter = new NoteAdapter();
+        recyclerView.setAdapter(adapter);
+        adapter.setData(notesList);
+
     }
 
 
