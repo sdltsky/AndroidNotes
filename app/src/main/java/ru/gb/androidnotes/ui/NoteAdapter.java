@@ -7,14 +7,19 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import java.util.ArrayList;
+import java.util.List;
 
 import ru.gb.androidnotes.domain.Note;
 
 public class NoteAdapter extends RecyclerView.Adapter<NoteViewHolder> {
-    private ArrayList<Note> data;
+    private List<Note> data;
+    private OnItemClickListener listener;
 
-    public void setData(ArrayList<Note> notesList) {
+    public NoteAdapter(OnItemClickListener listener) {
+        this.listener = listener;
+    }
+
+    public void setData(List<Note> notesList) {
         data = notesList;
         notifyDataSetChanged();
     }
@@ -23,7 +28,7 @@ public class NoteAdapter extends RecyclerView.Adapter<NoteViewHolder> {
     @Override
     public NoteViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         final LayoutInflater inflater = (LayoutInflater) parent.getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        return new NoteViewHolder(inflater, parent);
+        return new NoteViewHolder(inflater, parent, listener);
     }
 
     @Override
