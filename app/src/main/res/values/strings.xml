@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">AndroidNotes</string>
+    <string name="detail_note_new">Новая заметка</string>
+    <string name="detail_note_add">Редактирование заметки</string>
 </resources>

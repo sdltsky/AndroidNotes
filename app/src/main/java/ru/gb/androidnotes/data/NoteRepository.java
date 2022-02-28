@@ -6,7 +6,13 @@ import ru.gb.androidnotes.domain.Note;
 
 public interface NoteRepository {
 
-    public Note getNote(int position);
+    Note getNote(int position);
 
-    public List<Note> getNotes();
+    List<Note> getNotes();
+
+    void saveNote(Note note);
+
+    void deleteNote(int position);
+
+    long getLastId();
 }
